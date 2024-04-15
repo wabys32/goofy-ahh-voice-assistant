@@ -93,7 +93,7 @@ location = 'Almaty'
 
 # Set up voice engine
 engine = pyttsx3.init()
-engine.setProperty('voice', engine.getProperty('voices')[2].id)
+engine.setProperty('voice', engine.getProperty('voices')[0].id)
 current_command = ''
 
 # Bot voice
