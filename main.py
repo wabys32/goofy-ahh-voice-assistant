@@ -30,11 +30,13 @@ def button_function():
         print("Listening...")
         window.title("Virtual assistant | microphone: active")
         button.configure(image=image)
+        window.iconbitmap("Images/icon2.ico")
     else:
         listening = False
         print("Listening is over")
         window.title("Virtual assistant | microphone: inactive")
         button.configure(image=image2)
+        window.iconbitmap("Images/icon.ico")
 button = customtkinter.CTkButton(master=window, corner_radius=25, command=button_function, width=70, height=70, image=image2, text='', fg_color='#000000', hover_color='#303030')
 button.place(relx=0.5, rely=0.8, anchor=CENTER)
 
