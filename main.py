@@ -93,7 +93,7 @@ location = 'Almaty'
 
 # Set up voice engine
 engine = pyttsx3.init()
-engine.setProperty('voice', engine.getProperty('voices')[0].id)
+engine.setProperty('voice', engine.getProperty('voices')[2].id)
 current_command = ''
 
 # Bot voice
@@ -122,7 +122,7 @@ def open_chrome():
     subprocess.Popen(r'C:\Program Files\Google\Chrome\Application\chrome.exe')
 def greeting():
     print("Bot: ", end='')
-    list_of_greetings = ['Дарова!', 'Привет!', 'Здравствуй!', 'Салют!', 'Приветствую!']
+    list_of_greetings = ['Дарова!', 'Привет!', 'Здравствуй!', 'Салют!', 'Приветствую!', 'Здравия желаю!', 'Ты где пропадал?', 'Гутэн моргэн!']
     word_to_say = list_of_greetings[randint(0, len(list_of_greetings)-1)]
     print(word_to_say)
     say(word_to_say)
@@ -222,7 +222,14 @@ def open_openai():
     say(res)
     url = "https://chat.openai.com/"
     webbrowser.open(url)
-
+def open_github():
+    print("Bot: ", end='')
+    replies = ['Открываю!', 'Момент', 'Секунду']
+    res = replies[randint(0, len(replies) - 1)]
+    print(res)
+    say(res)
+    url = "https://github.com/"
+    webbrowser.open(url)
 
 
 # Default commands list
@@ -241,7 +248,8 @@ commands = {
     'открой ютуб': open_youtube,
     'открой чат джепяти': open_openai,
     'открой спотифай': open_spotify,
-    'выключись': goodbye
+    'выключись': goodbye,
+    'открой гид хаб': open_github
 }
 
 # Function for command recognition
