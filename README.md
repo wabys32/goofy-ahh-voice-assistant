@@ -1,7 +1,8 @@
 # virtual-python-assistant
 virtual assistant python project
+This project is a voice assistant implemented in Python, using libraries for speech recognition and command execution.
 
-# This project is a voice assistant implemented in Python, using libraries for speech recognition and command execution.
+# How to run
 1. Make sure you have Python 3.x installed
 2. Install the required dependencies:
 pip install tk
