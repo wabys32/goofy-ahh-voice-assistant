@@ -13,7 +13,9 @@ This project is a voice assistant implemented in Python, using libraries for spe
 - pip install openai
 - pip install requests
 - pip install difflib
-3. Run main.py
+3. Make sure you have installed all the content
+4. Put down your openai api key in the key.txt file
+5. Run main.py
 
 # How to use
 1. Press the button to activate mic
