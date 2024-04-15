@@ -24,9 +24,9 @@ This project is a voice assistant implemented in Python, using libraries for spe
 2. open websites (youtube, spotify, openai, github, chrome)
 3. say time
 4. what is the weather
-5. and any other questions
-6. say quote
-7. say joke
+5. say quote
+6. say joke
+7. and any other questions
 
 # Use
 Model can be implemented in websites/mobile apps or smart speaker. <br />
