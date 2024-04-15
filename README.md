@@ -1,18 +1,18 @@
 # virtual-python-assistant
-virtual assistant python project
+Virtual assistant python project __
 This project is a voice assistant implemented in Python, using libraries for speech recognition and command execution.
 
 # How to run
 1. Make sure you have Python 3.x installed
 2. Install the required dependencies:
-pip install tk
-pip install customtkinter
-pip install pyaudio
-pip install vosk
-pip install pyttsx3
-pip install openai
-pip install requests
-pip install difflib
+- pip install tk __
+- pip install customtkinter __
+- pip install pyaudio __
+- pip install vosk __
+- pip install pyttsx3 __
+- pip install openai __
+- pip install requests __
+- pip install difflib __
 3. Run main.py
 
 # How to use
