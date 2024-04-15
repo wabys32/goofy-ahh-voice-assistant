@@ -1,5 +1,5 @@
 # virtual-python-assistant
-Virtual assistant python project __
+Virtual assistant python project <br />
 This project is a voice assistant implemented in Python, using libraries for speech recognition and command execution.
 
 # How to run
