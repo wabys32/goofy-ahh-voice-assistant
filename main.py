@@ -2,17 +2,27 @@ import customtkinter
 from tkinter import *
 import threading
 
+# Window settings
 window = Tk()
 window.geometry("400x350")
 window.title("Goofy ahh bot 2.0 | microphone: inactive")
-window.iconbitmap("icon.ico")
+window.iconbitmap("Images/icon.ico")
 window.resizable(False, False)
 window.configure(bg='white')
-image = PhotoImage(file="mic.png").subsample(5)
-image2 = PhotoImage(file="mic2.png").subsample(5)
+image = PhotoImage(file="Images/mic.png").subsample(5)
+image2 = PhotoImage(file="Images/mic2.png").subsample(5)
+
+# Center the window
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+window_width = 400
+window_height = 350
+x = (screen_width // 2) - (window_width // 2)
+y = (screen_height // 2) - (window_height // 2)
+window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 
-
+# Function for mic button
 def button_function():
     global listening
     if listening == False:
@@ -25,11 +35,6 @@ def button_function():
         print("Listening is over")
         window.title("Virtual assistant | microphone: inactive")
         button.configure(image=image2)
-
-
-#window.create_line(50, 50, 250, 250, width=2, fill="black")
-
-
 button = customtkinter.CTkButton(master=window, corner_radius=25, command=button_function, width=70, height=70, image=image2, text='', fg_color='#000000', hover_color='#303030')
 button.place(relx=0.5, rely=0.8, anchor=CENTER)
 
@@ -37,7 +42,7 @@ button.place(relx=0.5, rely=0.8, anchor=CENTER)
 
 # Bot voice vizualisation
 frameCount = 22
-frames = [PhotoImage(file='voice1.gif',format = 'gif -index %i' %(i)).subsample(3) for i in range(frameCount)]
+frames = [PhotoImage(file='Images/voice1.gif',format = 'gif -index %i' %(i)).subsample(3) for i in range(frameCount)]
 def update(ind):
     global animate
     if animate == True:
@@ -121,6 +126,13 @@ def greeting():
     word_to_say = list_of_greetings[randint(0, len(list_of_greetings)-1)]
     print(word_to_say)
     say(word_to_say)
+def goodbye():
+    print("Bot: ", end='')
+    list_of_greetings = ['Всего хорошего!', 'Бай бай!', 'Адьос!', 'Удачи!']
+    word_to_say = list_of_greetings[randint(0, len(list_of_greetings) - 1)]
+    print(word_to_say)
+    say(word_to_say)
+    window.quit()
 def say_time():
     print("Bot: ", end='')
     now = datetime.now()
@@ -153,7 +165,6 @@ def rock_paper_scissors():
             say('Вы проиграли')
         else:
             say('Вы проиграли')
-
 def weather():
     url = f'http://api.openweathermap.org/data/2.5/weather?q={location}&units=metric&lang=ru&appid={api_key}'
     result = requests.get(url)
@@ -229,10 +240,11 @@ commands = {
     'цитату': tell_quote,
     'открой ютуб': open_youtube,
     'открой чат джепяти': open_openai,
-    'открой спотифай': open_spotify
+    'открой спотифай': open_spotify,
+    'выключись': goodbye
 }
 
-
+# Function for command recognition
 def recognize_command(command):
     if listening == True:
         print("You:", command)
@@ -264,9 +276,6 @@ def recognize_command(command):
         print("Вы пытаетесь говорить? Включите микрофон")
 
 
-
-
-
 # Listening function
 def listen():
     while True:
@@ -277,19 +286,18 @@ def listen():
                 yield answer['text']
 
 
-
+# When model loaded, it is output
 print('Model loaded!')
 listening = False
+# When voice command received, the function recognize_command() starts
 def start_voice_recognition():
     for text in listen():
         recognize_command(text)
 
 
-
-
+# Multi processes
 voice_thread = threading.Thread(target=start_voice_recognition)
 voice_thread.daemon = True
 voice_thread.start()
 
 window.mainloop()
-
