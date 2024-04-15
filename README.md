@@ -5,14 +5,14 @@ This project is a voice assistant implemented in Python, using libraries for spe
 # How to run
 1. Make sure you have Python 3.x installed
 2. Install the required dependencies:
-- pip install tk __
-- pip install customtkinter __
-- pip install pyaudio __
-- pip install vosk __
-- pip install pyttsx3 __
-- pip install openai __
-- pip install requests __
-- pip install difflib __
+- pip install tk
+- pip install customtkinter
+- pip install pyaudio
+- pip install vosk
+- pip install pyttsx3
+- pip install openai
+- pip install requests
+- pip install difflib
 3. Run main.py
 
 # How to use
@@ -29,5 +29,5 @@ This project is a voice assistant implemented in Python, using libraries for spe
 7. say joke
 
 # Use
-Model can be implemented in websites/mobile apps or smart speaker.
+Model can be implemented in websites/mobile apps or smart speaker. <br />
 It's able to work in the background.
