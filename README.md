@@ -1,4 +1,5 @@
 # virtual-python-assistant
+![photo_2024-04-25_21-48-39](https://github.com/wabys32/goofy-ahh-voice-assistant/assets/117669608/6790e7f2-659b-4d40-9c2e-98baa96e38d6)
 Virtual assistant python project <br />
 This project is a voice assistant implemented in Python, using libraries for speech recognition and command execution.
 
@@ -33,3 +34,14 @@ This project is a voice assistant implemented in Python, using libraries for spe
 # Use
 Model can be implemented in websites/mobile apps or smart speaker. <br />
 It's able to work in the background.
+
+# Telegram bot
+https://t.me/v_assistant7283_bot
+
+## Features:
+The same commands as listed above, but it has some additional ones:
+- switch to voice mode
+- switch to text mode
+Both these commands switch between bot replies mods. Accordingly, when the bot is in the text mode(by default) it replies with text messages, and if the bot is in the voice mod, it replies with voice messages.
+## How to use:
+Send text or audio messages, and bot will reply
