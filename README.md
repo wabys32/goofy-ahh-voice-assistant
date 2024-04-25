@@ -45,4 +45,5 @@ The same commands as listed above, but it has some additional ones:
 - switch to text mode
 Both these commands switch between bot replies mods. Accordingly, when the bot is in the text mode(by default) it replies with text messages, and if the bot is in the voice mod, it replies with voice messages.
 ### How to use:
-Send text or audio messages, and bot will reply
+1. Run tg_bot.py to activate the bot, or host this script on a server for permanent work
+2. Send text or audio messages, and bot will reply
