@@ -1,5 +1,6 @@
 # Virtual python assistant
-![photo_2024-04-25_21-48-39](https://github.com/wabys32/goofy-ahh-voice-assistant/assets/117669608/7de33210-e468-47ec-a0e9-c69da92c0e7f)
+<div style="width:20%; position:absolute; left:40%;">
+![photo_2024-04-25_21-48-39](https://github.com/wabys32/goofy-ahh-voice-assistant/assets/117669608/7de33210-e468-47ec-a0e9-c69da92c0e7f) </div>
 <br />
 Virtual assistant python project <br />
 This project is a voice assistant implemented in Python, using libraries for speech recognition and command execution.
