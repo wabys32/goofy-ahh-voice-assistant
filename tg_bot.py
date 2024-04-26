@@ -16,7 +16,7 @@ import time
 
 
 # Set up telegram bot
-bot = telebot.TeleBot('7113066147:AAH3dtFwzmWKYpLLwWg4CS9m6n-5chMuV6M')
+bot = telebot.TeleBot('7113066147:AAFZQ9D6Y67ltV9y7-03QSpK2UCs2JEdiKk')
 
 # Set up openai api (key.txt file must be in the same directory as this python script)
 f = open('key.txt', 'r')
@@ -51,6 +51,7 @@ chat_link = None
 text_mode = True
 def say(text):
     global text_mode
+    global chat_link
     if text_mode:
         bot.send_message(chat_link, text)
     else:
@@ -322,6 +323,8 @@ def recognise_sound() -> str:
 # Messages ====================================
 @bot.message_handler()
 def main(message):
+    global chat_link 
+    chat_link = message.chat.id
     msg = message.text.lower()
     recognize_command(msg)
 
